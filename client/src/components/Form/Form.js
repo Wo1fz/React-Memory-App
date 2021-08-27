@@ -21,7 +21,15 @@ const Form = () => {
     dispatch(createPost(postData))
   }
 
-  const clear = () => {}
+  const clear = () => {
+    setPostData({
+      creator: '',
+      title: '',
+      message: '',
+      tags: '',
+      selectedFile: '',
+    })
+  }
 
   return (
     <Paper className={classes.paper}>
