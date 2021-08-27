@@ -19,17 +19,10 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     dispatch(createPost(postData))
+    clear()
   }
 
-  const clear = () => {
-    setPostData({
-      creator: '',
-      title: '',
-      message: '',
-      tags: '',
-      selectedFile: '',
-    })
-  }
+  const clear = () => {}
 
   return (
     <Paper className={classes.paper}>
